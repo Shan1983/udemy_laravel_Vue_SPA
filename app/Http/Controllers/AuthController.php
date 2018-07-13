@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class AuthController extends Controller
 {
+
+
     /**
      * Create a new AuthController instance.
      *
@@ -13,7 +16,19 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login']]);
+        $this->middleware('JWT', ['except' => ['login', 'signup']]);
+    }
+
+    /**
+     * singup - register a new user
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function signup(Request $request)
+    {
+
+        User::create($request->all());
+        return $this->login($request);
     }
 
     /**
