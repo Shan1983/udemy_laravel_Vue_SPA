@@ -42,7 +42,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return $category;
+        return new CategoryResource($category);
     }
 
     /**
@@ -59,7 +59,7 @@ class CategoryController extends Controller
             'slug' => str_slug($request->name),
         ]);
 
-        return response('updated', 202);
+        return response('updated', 200);
     }
 
     /**
