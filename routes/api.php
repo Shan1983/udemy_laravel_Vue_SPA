@@ -20,3 +20,7 @@ use Illuminate\Http\Request;
 Route::apiResource('/question', 'QuestionController');
 Route::apiResource('/category', 'CategoryController');
 Route::apiResource('/question/{question}/reply', 'ReplyController');
+
+// likes
+Route::post('/like/{reply}', 'LikeController@likeIt')->name('likeit');
+Route::delete('/like/{reply}', 'LikeController@unLikeIt')->name('unlikeit');
