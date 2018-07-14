@@ -1,10 +1,10 @@
 class Token {
     isValid(token) {
         const payload = this.payload(token)
+
         // check if the iss checks out
         if (payload) {
-            return payload.iss === 'http://udemy-forum.test/api/auth/login' ? true : false
-            return true
+            return payload.iss === 'http://udemy-forum.test/api/auth/login' || 'http://udemy-forum.test/api/auth/signup' ? true : false
         }
 
         return false

@@ -10,6 +10,7 @@
 import toolbar from "./ToolBar";
 import AppFooter from "./AppFooter";
 import Login from "./login/Login";
+import Signup from "./login/Signup";
 export default {
   components: {
     toolbar,
