@@ -1,5 +1,5 @@
 <template>
-  <v-footer absolute="true" class="pa-3">
+  <v-footer class="pa-3">
       Forum
     <v-spacer></v-spacer>
     <div>&copy; {{ new Date().getFullYear() }}</div>
