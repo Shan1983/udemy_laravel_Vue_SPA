@@ -12,6 +12,11 @@ window.Vue = require('vue');
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 
+// helpers
+import User from './Helpers/User'
+window.User = User
+
+
 Vue.use(Vuetify)
 
 /**
